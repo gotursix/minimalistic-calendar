@@ -1,18 +1,21 @@
-<html lang="en">
+<!DOCTYPE html>
+<html>
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
     <title>Calendar</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
 </head>
 
-<body>
+<body class="bg-danger">
     <div class="container col-sm-4 col-md-7 col-lg-4 mt-5">
-        <h1>Calendar</h1>
         <div class="card">
-            <h3 class="card-header" id="monthAndYear">Month And Year</h3>
-            <table class="table table-bordered table-responsive-sn" id="calendar">
+            <h3 class="card-header" id="monthAndYear"></h3>
+            <table class="table table-bordered table-responsive-sm" id="calendar">
                 <thead>
                     <tr>
                         <th>Sun</th>
@@ -24,17 +27,27 @@
                         <th>Sat</th>
                     </tr>
                 </thead>
+
                 <tbody id="calendar-body">
 
                 </tbody>
             </table>
-            <div class="form-inline">
-                <button class="btn btn-outline-secondary col-sm-6" onclick=previous()>Previous</button>
-                <button class="btn btn-outline-primary col-sm-6" onclick=next()>Next</button>
+
+            <div class="text-center">
+
+                <button class="btn btn-outline-primary col-sm-4" id="previous" onclick="previous()">Previous month</button>
+                <button class="btn btn-outline-primary col-sm-4 " id="next" onclick="next()">Next month</button>
+            </div>
+
+            <div class="text-center p-1">
+                <button class="btn btn-outline-secondary col-sm-4 text-center" id="now" onclick="now()">Current month</button>
 
             </div>
         </div>
-        <script src="js/scripts.js"></script>
+    </div>
+    </div>
+
+    <script src="js/scripts.js"></script>
 </body>
 
 </html>
