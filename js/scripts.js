@@ -53,6 +53,7 @@ function showCalendar(month, year) {
         for (let j = 0; j < 7; j++) {
             if (i === 0 && j < firstDay) {
                 let cell = document.createElement('td')
+                    //let cell = document.createElement('span');
                 let cellText = document.createTextNode('')
                 cell.appendChild(cellText)
                 row.appendChild(cell)
